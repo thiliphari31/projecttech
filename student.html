@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="students.xsl"?>
+
+<students>
+
+<student>
+
+<name>Gowtham K</name>
+
+<age>20</age>
+
+<dob>05/11/2000</dob>
+
+<mobile>9597778797</mobile>
+
+<address>Saravanampatti, Coimbatore, Tamil Nadu</address>
+
+</student>
+
+<student>
+
+<name>Subash G</name>
+
+<age>21</age>
+
+<dob>23/04/2000</dob>
+
+<mobile>7550381058</mobile>
+
+<address>Thudiyalur, Coimbatore, Tamil Nadu</address>
+
+</student>
+
+<student>
+
+<name>Vikram Pandian K</name>
+
+<age>20</age>
+
+<dob>12/07/2000</dob>
+
+<mobile>6369998479</mobile>
+
+<address>Theni, Tamil Nadu</address>
+
+</student>
+
+<student>
+
+<name>Vijay M N</name>
+
+<age>21</age>
+
+<dob>05/05/1999</dob>
+
+<mobile>7094325052</mobile>
+
+<address>Saibaba Colony, Coimbatore, Tamil Nadu</address>
+
+</student>
+
+</students>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+
+<html>
+
+<body>
+
+<h2>Students Personal Details</h2>
+
+<table border="1">
+
+<tr bgcolor="#9acd32">
+
+<th>Name</th>
+
+<th>Age</th>
+
+<th>DOB</th>
+
+<th>Mobile</th>
+
+<th>Address</th>
+
+</tr>
+
+<xsl:for-each select="students/student">
+
+<tr>
+
+<td><xsl:value-of select="name"/></td>
+
+<td><xsl:value-of select="age"/></td>
+
+<td><xsl:value-of select="dob"/></td>
+
+<td><xsl:value-of select="mobile"/></td>
+
+<td><xsl:value-of select="address"/></td>
+
+</tr>
+
+</xsl:for-each>
+
+</table>
+
+</body>
+
+</html>
+
+</xsl:template>
+
+</xsl:stylesheet>
